@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Forst Fire Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="forestno 1 or 2" placeholder="forestno 1 or 2" required="required" /><br>
+    	<input type="text" name="day	in 1 to 31" placeholder="day	in 1 to 31" required="required" /><br>
+      <input type="text" name="month	in 1 to 12" placeholder="month	in 1 to 12" required="required" /><br>
+      <input type="text" name="Temperature in Celsius degrees: 22 to 42" placeholder="Temperature in Celsius degrees: 22 to 42" required="required" /><br>
+      <input type="text" name="RH   in %: 21 to 90" placeholder="RH   in %: 21 to 90" required="required" /><br>
+      <input type="text" name="Ws   in km/h: 6 to 29	" placeholder="Ws   in km/h: 6 to 29	" required="required" /><br>
+      <input type="text" name="Rain in mm 0 to 16.8" placeholder="Rain in mm 0 to 16.8" required="required" /><br>
+      <input type="text" name="FFMC Index 28.6 to 92.5" placeholder="FFMC Index 28.6 to 92.5" required="required" /><br>
+      <input type="text" name="DMC Index 1.1 to 65.9	" placeholder="DMC Index 1.1 to 65.9	" required="required"/><br>
+      <input type="text" name="DC  Index 7 to 220.4" placeholder="DC  Index 7 to 220.4" required="required" /><br>
+      <input type="text" name="ISI Index 0 to 18.5" placeholder="ISI Index 0 to 18.5" required="required" /><br>
+      <input type="text" name="BUI Index 1.1 to 68" placeholder="BUI Index 1.1 to 68" required=required" /><br>
+      <input type="text" name="FWI Index 0 to 31.1" placeholder="FWI Index 0 to 31.1" required=required" /><br>
+
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
+
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+	
